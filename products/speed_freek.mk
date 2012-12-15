@@ -51,6 +51,3 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/proprietary/common/etc/init.d/91demenedzipalign:system/etc/init.d/91demenedzipalign \
     vendor/DEMENTED/proprietary/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
     vendor/DEMENTED/proprietary/common/etc/init.d/99dementedsystem:system/etc/init.d/99dementedsystem 
-
-# Additional DEMENTED packages
-# PRODUCT_PACKAGES += \

@@ -17,6 +17,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # T-mobile heme engine
 include vendor/DEMENTED/products/themes_common.mk
 
+PRODUCT_PACKAGES += \
+    Apollo\
+    DSPManager \
+    FileManager
+
 # Common Google Applications and libs
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED/proprietary/common/app/Calendar.apk:system/app/Calendar.apk \
