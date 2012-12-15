@@ -17,6 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # T-mobile heme engine
 include vendor/DEMENTED/products/themes_common.mk
 
+# Additional DEMENTED Apps
 PRODUCT_PACKAGES += \
     Apollo\
     DSPManager \
