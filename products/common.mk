@@ -83,14 +83,15 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/proprietary/common/xbin/zipalign:system/xbin/zipalign \
     vendor/DEMENTED/proprietary/common/xbin/su:system/xbin/su 
     
-# Common files for init.d support and etc files
+# Common etc files
 PRODUCT_COPY_FILES += \
-    vendor/DEMENTED/proprietary/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/DEMENTED/proprietary/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
     vendor/DEMENTED/proprietary/common/bin/sysinit:system/bin/sysinit \
     vendor/DEMENTED/proprietary/common/etc/gps.conf:system/etc/gps.conf \
     vendor/DEMENTED/proprietary/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/DEMENTED/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf 
+
+# DEMENTED SPEED FREEK init.d and build.prop tweaks
+include vendor/DEMENTED/products/speed_freek.mk
 
 # Common scripts
 PRODUCT_COPY_FILES += \
