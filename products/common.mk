@@ -20,8 +20,7 @@ include vendor/DEMENTED/products/themes_common.mk
 # Additional DEMENTED Apps
 PRODUCT_PACKAGES += \
     Apollo\
-    DSPManager \
-    FileManager
+    DSPManager
 
 # Common Google Applications and libs
 PRODUCT_COPY_FILES += \
