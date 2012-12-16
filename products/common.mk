@@ -42,7 +42,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/proprietary/common/app/LatinIMEDictionaryPack.apk:system/app/LatinIMEDictionaryPack.apk \
     vendor/DEMENTED/proprietary/common/app/Maps.apk:system/app/Maps.apk \
     vendor/DEMENTED/proprietary/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
-    vendor/DEMENTED/proprietary/common/app/Music.apk:system/app/Music.apk \
     vendor/DEMENTED/proprietary/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/DEMENTED/proprietary/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/DEMENTED/proprietary/common/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
