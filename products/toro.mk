@@ -23,6 +23,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/DEMENTED/proprietary/tuna/app/Gallery2.apk:system/app/Gallery2.apk \
     vendor/DEMENTED/proprietary/tuna/media/audio/notifications/Nexus.mp3:system/media/audio/notifications/Nexus.mp3 \
     vendor/DEMENTED/proprietary/tuna/media/audio/notifications/Simple_High.mp3:system/media/audio/notifications/Simple_High.mp3 \
+    vendor/DEMENTED/proprietary/tuna/media/audio/ringtones/Provincial_Synthetic.ogg:system/media/audio/ringtones/Halo.m4a \
     vendor/DEMENTED/proprietary/tuna/media/audio/ringtones/Provincial_Synthetic.ogg:system/media/audio/ringtones/Provincial_Synthetic.ogg \
     vendor/DEMENTED/proprietary/common/app/Wallet.apk:system/app/Wallet.apk
 
