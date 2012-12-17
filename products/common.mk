@@ -24,11 +24,14 @@ PRODUCT_PACKAGES += \
 
 # Common Google Applications and libs
 PRODUCT_COPY_FILES += \
+    vendor/DEMENTED/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/DEMENTED/proprietary/common/app/Calendar.apk:system/app/Calendar.apk \
     vendor/DEMENTED/proprietary/common/app/Chrome.apk:system/app/Chrome.apk \
+    vendor/DEMENTED/proprietary/common/app/Earth.apk:system/app/Earth.apk \
+    vendor/DEMENTED/proprietary/common/app/Email.apk:system/app/Email.apk \
     vendor/DEMENTED/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/DEMENTED/proprietary/common/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
-    vendor/DEMENTED/proprietary/common/app/Gmail2.apk:system/app/Gmail2.apk \
+    vendor/DEMENTED/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/DEMENTED/proprietary/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
     vendor/DEMENTED/proprietary/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
     vendor/DEMENTED/proprietary/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
@@ -58,6 +61,8 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/proprietary/common/etc/updatecmds/google_generic_update.txt:system/etc/updatecmds/google_generic_update.txt \
     vendor/DEMENTED/proprietary/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     vendor/DEMENTED/proprietary/common/lib/libchromeview.so:system/lib/libchromeview.so \
+    vendor/DEMENTED/proprietary/common/lib/libearthmobile.so:system/lib/libearthmobile.so \
+    vendor/DEMENTED/proprietary/common/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
     vendor/DEMENTED/proprietary/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/DEMENTED/proprietary/common/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     vendor/DEMENTED/proprietary/common/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
