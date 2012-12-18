@@ -1,7 +1,7 @@
-# add_lunch_combo DEMENTED-Droid_toro-user
-add_lunch_combo DEMENTED-Droid_toro-userdebug
-# add_lunch_combo DEMENTED-Droid_maguro-user
-add_lunch_combo DEMENTED-Droid_maguro-userdebug
-# add_lunch_combo DEMENTED-Droid_mako-user
-# add_lunch_combo DEMENTED-Droid_mako-userdebug
+# add_lunch_combo DEMENTED_Droid_toro-user
+add_lunch_combo DEMENTED_Droid_toro-userdebug
+# add_lunch_combo DEMENTED_Droid_maguro-user
+add_lunch_combo DEMENTED_Droid_maguro-userdebug
+# add_lunch_combo DEMENTED_Droid_mako-user
+# add_lunch_combo DEMENTED_Droid_mako-userdebug
 

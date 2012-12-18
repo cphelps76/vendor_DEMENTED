@@ -5,7 +5,7 @@ $(call inherit-product, device/samsung/toro/full_toro.mk)
 $(call inherit-product, vendor/DEMENTED-Droid/products/common.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := DEMENTED-Droid_toro
+PRODUCT_NAME := DEMENTED_Droid_toro
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := toro
 PRODUCT_MODEL := Galaxy Nexus

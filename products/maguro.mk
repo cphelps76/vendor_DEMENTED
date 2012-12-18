@@ -5,7 +5,7 @@ $(call inherit-product, device/samsung/maguro/full_maguro.mk)
 $(call inherit-product, vendor/DEMENTED-Droid/products/common.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := DEMENTED-Droid_maguro
+PRODUCT_NAME := DEMENTED_Droid_maguro
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := maguro
 PRODUCT_MODEL := Galaxy Nexus
