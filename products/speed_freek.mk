@@ -40,14 +40,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/02DEMENTED-Droidkernel:system/etc/init.d/02DEMENTED-Droidkernel \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/02dementedkernel:system/etc/init.d/02dementedkernel \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/03DEMENTED-Droidgov:system/etc/init.d/03DEMENTED-Droidgov \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/04DEMENTED-Droidedt_tweaks:system/etc/init.d/04DEMENTED-Droidedt_tweaks \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/05DEMENTED-Droidrfs:system/etc/init.d/05DEMENTED-Droidrfs \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/07DEMENTED-Droidtweaks:system/etc/init.d/07DEMENTED-Droidtweaks \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/09DEMENTED-Droidsetrenice:system/etc/init.d/09DEMENTED-Droidsetrenice \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/80DEMENTED-Droidloopysmoothnesstweak:system/etc/init.d/80DEMENTED-Droidloopysmoothnesstweak \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/91demenedzipalign:system/etc/init.d/91demenedzipalign \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/03dementedgov:system/etc/init.d/03dementedgov \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/04dementededt_tweaks:system/etc/init.d/04dementededt_tweaks \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/05dementedrfs:system/etc/init.d/05dementedrfs \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/07dementedtweaks:system/etc/init.d/07dementedtweaks \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/09dementedsetrenice:system/etc/init.d/09dementedsetrenice \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/80dementedloopysmoothnesstweak:system/etc/init.d/80dementedloopysmoothnesstweak \
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/91dementedzipalign:system/etc/init.d/91dementedzipalign \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/99DEMENTED-Droidsystem:system/etc/init.d/99DEMENTED-Droidsystem 
+    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/99dementedsystem:system/etc/init.d/99dementedsystem 
