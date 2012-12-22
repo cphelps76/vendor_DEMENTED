@@ -78,7 +78,8 @@ PRODUCT_COPY_FILES += \
 
 # Common Applications
 PRODUCT_COPY_FILES += \
-    vendor/DEMENTED-Droid/proprietary/common/app/Superuser.apk:system/app/Superuser.apk 
+    vendor/DEMENTED-Droid/proprietary/common/app/Superuser.apk:system/app/Superuser.apk \
+    vendor/DEMENTED-Droid/proprietary/common/app/SuperSU.apk:system/app/SuperSU.apk
 
 # Common Binary files
 PRODUCT_COPY_FILES += \
