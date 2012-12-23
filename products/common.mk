@@ -19,8 +19,7 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
-    Apollo\
-    DSPManager
+    Apollo
 
 # Common Google Applications and libs
 PRODUCT_COPY_FILES += \
@@ -94,6 +93,9 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/etc/gps.conf:system/etc/gps.conf \
     vendor/DEMENTED-Droid/proprietary/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/DEMENTED-Droid/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf 
+
+# BEATS Audio
+include vendor/DEMENTED-Droid/products/beats_audio.mk
 
 # DEMENTED-Droid SPEED FREEK init.d and build.prop tweaks
 include vendor/DEMENTED-Droid/products/speed_freek.mk
