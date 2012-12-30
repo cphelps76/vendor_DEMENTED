@@ -80,6 +80,24 @@ rm -rf $REPACK/ota/system/framework/send_bug.jar
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
+# Fix Beats
+rm -f $REPACK/ota/system/etc/audio_effects.conf
+rm -f $REPACK/ota/system/etc/media_profiles.xml
+rm -f $REPACK/ota/system/lib/bluez-plugin/audio.so
+rm -f $REPACK/ota/system/lib/soundfx/libaudiopreprocessing.so
+rm -f $REPACK/ota/system/lib/soundfx/libbundlewrapper.so
+rm -f $REPACK/ota/system/lib/soundfx/libreverbwrapper.so
+rm -f $REPACK/ota/system/lib/soundfx/libvisualizer.so
+rm -f $REPACK/ota/system/lib/libSR_AudioIn.so
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/etc/audio_effects.conf $REPACK/ota/system/etc/audio_effects.conf
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/etc/media_profiles.xml $REPACK/ota/system/etc/media_profiles.xml
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/lib/bluez-plugin/audio.so $REPACK/ota/system/lib/bluez-plugin/audio.so
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libaudiopreprocessing.so $REPACK/ota/system/lib/soundfx/libaudiopreprocessing.so
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libbundlewrapper.so $REPACK/ota/system/lib/soundfx/libbundlewrapper.so
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libreverbwrapper.so $REPACK/ota/system/lib/soundfx/libreverbwrapper.so
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libvisualizer.so $REPACK/ota/system/lib/soundfx/libvisualizer.so
+cp -f $ANDROID_BUILD_TOP/vendor/DEMENTED-Droid/proprietary/common/beats/lib/libSR_AudioIn.so $REPACK/ota/system/lib/libSR_AudioIn.so
+
 # Determine what to name the new signed package
 	OUTFILE=$OUT/$TARGET_PRODUCT-$(date +"%m-%d-%y")-squished.zip
 
