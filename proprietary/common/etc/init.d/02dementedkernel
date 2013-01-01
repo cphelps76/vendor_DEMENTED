@@ -27,7 +27,7 @@ sysctl -w kernel.threads-max=525810
 sysctl -w kernel.multi_threading=2
 
 # disable logger - (comment and reboot for logcat)
-rm /dev/log/main
+# rm /dev/log/main
 
 #I/O
 #
