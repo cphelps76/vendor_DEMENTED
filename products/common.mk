@@ -20,7 +20,8 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Apollo \
-    Chronus
+    Chronus \
+    DEMENTEDHome
 
 # Common Google Applications and libs
 PRODUCT_COPY_FILES += \
