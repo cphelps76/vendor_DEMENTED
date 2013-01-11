@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so 
 
-
 # Common Applications
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/Superuser.apk:system/app/Superuser.apk \
