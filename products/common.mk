@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
     Chronus \
     DEMENTEDHome
 
-# Common Google Applications and libs
+# Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Calendar.apk:system/app/Calendar.apk \
@@ -69,6 +69,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/liblightcycle.so:system/lib/liblightcycle.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
@@ -76,6 +77,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libttspico.so:system/lib/libttspico.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so 
+
 
 # Common Applications
 PRODUCT_COPY_FILES += \
