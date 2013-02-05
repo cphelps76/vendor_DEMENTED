@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     Chronus \
     DEMENTEDBeats \
+    DEMENTED-Droid \
     DEMENTEDFiles \
     DEMENTEDHome
 
