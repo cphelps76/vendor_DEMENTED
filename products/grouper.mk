@@ -6,10 +6,10 @@ $(call inherit-product, vendor/DEMENTED-Droid/products/common.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := DEMENTED_Droid_grouper
-PRODUCT_BRAND := asus
+PRODUCT_BRAND := Asus
 PRODUCT_DEVICE := grouper
-PRODUCT_MODEL := N7
-PRODUCT_MANUFACTURER := asus
+PRODUCT_MODEL := Nexus 7
+PRODUCT_MANUFACTURER := Asus
 
 # Inherit common build.prop overrides
 -include vendor/DEMENTED-Droid/products/common_versions.mk
