@@ -20,13 +20,11 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Apollo \
-    Calendar \
     Chronus \
     DEMENTEDBeats \
     DEMENTED-Droid \
     DEMENTEDFiles \
-    DEMENTEDHome \
-    Email
+    DEMENTEDHome 
 
 # Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
