@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
     DEMENTEDBeats \
     DEMENTED-Droid \
     DEMENTEDFiles \
-    DEMENTEDHome
+    DEMENTEDHome \
+    Email
 
 # Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
@@ -33,7 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Chrome.apk:system/app/Chrome.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Earth.apk:system/app/Earth.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Email.apk:system/app/Email.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
