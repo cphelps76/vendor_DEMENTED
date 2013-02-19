@@ -20,6 +20,7 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Apollo \
+    Calendar \
     Chronus \
     DEMENTEDBeats \
     DEMENTED-Droid \
@@ -30,7 +31,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Calendar.apk:system/app/Calendar.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Chrome.apk:system/app/Chrome.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Earth.apk:system/app/Earth.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Email.apk:system/app/Email.apk \
