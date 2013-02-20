@@ -4,6 +4,9 @@ $(call inherit-product, device/asus/grouper/full_grouper.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/DEMENTED-Droid/products/common.mk)
 
+# Grouper Overlays.
+PRODUCT_PACKAGE_OVERLAYS += vendor/DEMENTED-Droid/overlay/grouper
+
 # Setup device specific product configuration.
 PRODUCT_NAME := DEMENTED_Droid_grouper
 PRODUCT_BRAND := Asus
