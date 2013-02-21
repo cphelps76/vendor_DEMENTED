@@ -17,6 +17,10 @@ PRODUCT_MANUFACTURER := Asus
 # Inherit common build.prop overrides
 -include vendor/DEMENTED-Droid/products/common_versions.mk
 
+# Additional DEMENTED-Droid Apps
+PRODUCT_PACKAGES += \
+    Torch
+
 # Copy toro specific prebuilt files
 PRODUCT_COPY_FILES +=  \
     vendor/DEMENTED-Droid/proprietary/grouper/media/bootanimation.zip:system/media/bootanimation.zip \
