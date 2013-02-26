@@ -2,7 +2,7 @@
 $(call inherit-product, device/lge/mako/full_mako.mk)
 
 # Mako overlay files
-PRODUCT_PACKAGE_OVERLAYS += vendor/DEMENTED-Droid/Overlay/mako
+PRODUCT_PACKAGE_OVERLAYS += vendor/DEMENTED-Droid/overlay/mako
 
 # Inherit common product files.
 $(call inherit-product, vendor/DEMENTED-Droid/products/common.mk)
