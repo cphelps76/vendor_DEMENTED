@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
 
 # Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
+    vendor/DEMENTED-Droid/proprietary/common/app/GoogleVoice.apk:system/app/GoogleVoice.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Chrome.apk:system/app/Chrome.apk \
@@ -49,6 +50,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/Maps.apk:system/app/Maps.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
+    vendor/DEMENTED-Droid/proprietary/common/app/NotificationsWidget.apk:system/app/NotificationsWidget.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Phonesky.apk:system/app/Phonesky.apk \
@@ -78,7 +80,9 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libttscompat.so:system/lib/libttscompat.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libttspico.so:system/lib/libttspico.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
-    vendor/DEMENTED-Droid/proprietary/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so 
+    vendor/DEMENTED-Droid/proprietary/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so
 
 # Common Applications
 PRODUCT_COPY_FILES += \
