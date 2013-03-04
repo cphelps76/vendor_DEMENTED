@@ -14,6 +14,8 @@ PRODUCT_DEVICE := grouper
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
 
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.2.2/JDQ39/405518:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.2.2 JDQ39 405518 release-keys" BUILD_NUMBER=405518
+
 # Inherit common build.prop overrides
 -include vendor/DEMENTED-Droid/products/common_versions.mk
 
