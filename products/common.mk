@@ -106,9 +106,6 @@ PRODUCT_COPY_FILES += \
 # BEATS Audio
 include vendor/DEMENTED-Droid/products/beats_audio.mk
 
-# DEMENTED-Droid SPEED FREEK init.d and build.prop tweaks
-include vendor/DEMENTED-Droid/products/speed_freek.mk
-
 # Common scripts
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/xbin/cpuinfo:system/xbin/cpuinfo \

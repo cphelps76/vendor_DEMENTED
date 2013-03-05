@@ -19,6 +19,9 @@ PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occa
 # Inherit common build.prop overrides
 -include vendor/DEMENTED-Droid/products/common_versions.mk
 
+# DEMENTED-Droid SPEED FREEK init.d and build.prop tweaks
+include vendor/DEMENTED-Droid/products/speed_freek.mk
+
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Torch

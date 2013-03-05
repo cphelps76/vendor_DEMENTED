@@ -16,6 +16,9 @@ PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=yakju BUILD_FINGERPRINT=google/yakj
 # Inherit common build.prop overrides
 -include vendor/DEMENTED-Droid/products/common_versions.mk
 
+# DEMENTED-Droid SPEED FREEK init.d and build.prop tweaks
+include vendor/DEMENTED-Droid/products/speed_freek.mk
+
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES +=  \
     vendor/DEMENTED-Droid/proprietary/tuna/media/bootanimation.zip:system/media/bootanimation.zip \
