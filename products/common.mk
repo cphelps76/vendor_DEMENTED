@@ -92,6 +92,11 @@ PRODUCT_COPY_FILES += \
 
 # Superuser
 SUPERUSER_EMBEDDED := true
+
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/DEMENTED-Droid/proprietary/common/app/SuperSU.apk:system/app/SuperSU.apk \
+    vendor/DEMENTED-Droid/proprietary/common/xbin/su:system/xbin/su
     
 # Common etc files
 PRODUCT_COPY_FILES += \
