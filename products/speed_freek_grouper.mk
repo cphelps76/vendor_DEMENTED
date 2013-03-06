@@ -46,8 +46,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/grouper/etc/init.d/03dementedgovgrouper:system/etc/init.d/03dementedgovgrouper \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/04dementededt_tweaks:system/etc/init.d/04dementededt_tweaks \
     vendor/DEMENTED-Droid/proprietary/grouper/etc/init.d/05dementedfsgrouper:system/etc/init.d/05dementedfsgrouper \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/07dementedtweaks:system/etc/init.d/07dementedtweaks \
-    vendor/DEMENTED-Droid/proprietary/common/etc/init.d/09dementedsetrenice:system/etc/init.d/09dementedsetrenice \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/80dementedloopysmoothnesstweak:system/etc/init.d/80dementedloopysmoothnesstweak \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/91dementedzipalign:system/etc/init.d/91dementedzipalign \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/97dementedtcp:system/etc/init.d/97dementedtcp \
