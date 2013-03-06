@@ -89,6 +89,9 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/bin/flash_image:system/bin/flash_image \
     vendor/DEMENTED-Droid/proprietary/common/xbin/bash:system/xbin/bash \
     vendor/DEMENTED-Droid/proprietary/common/xbin/zipalign:system/xbin/zipalign \
+
+# Superuser
+SUPERUSER_EMBEDDED := true
     
 # Common etc files
 PRODUCT_COPY_FILES += \
