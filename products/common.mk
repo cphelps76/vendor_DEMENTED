@@ -84,17 +84,11 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so
 
-# Common Applications
-PRODUCT_COPY_FILES += \
-    vendor/DEMENTED-Droid/proprietary/common/app/Superuser.apk:system/app/Superuser.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/SuperSU.apk:system/app/SuperSU.apk
-
 # Common Binary files
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/bin/flash_image:system/bin/flash_image \
     vendor/DEMENTED-Droid/proprietary/common/xbin/bash:system/xbin/bash \
     vendor/DEMENTED-Droid/proprietary/common/xbin/zipalign:system/xbin/zipalign \
-    vendor/DEMENTED-Droid/proprietary/common/xbin/su:system/xbin/su 
     
 # Common etc files
 PRODUCT_COPY_FILES += \
