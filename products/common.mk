@@ -20,12 +20,12 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Apollo \
-    Chronus \
     DEMENTEDBeats \
     DEMENTED-Droid \
     DEMENTEDFiles \
     DEMENTEDHome \
-    Gallery2
+    Gallery2 \
+    LockClock
 
 # Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
