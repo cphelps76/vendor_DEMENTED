@@ -5,4 +5,4 @@ add_lunch_combo DEMENTED_Droid_maguro-userdebug
 # add_lunch_combo DEMENTED_Droid_mako-user
 add_lunch_combo DEMENTED_Droid_mako-userdebug
 # add_lunch_combo DEMENTED_Droid_grouper-user
-# add_lunch_combo DEMENTED_Droid_grouper-userdebug
+add_lunch_combo DEMENTED_Droid_grouper-userdebug
