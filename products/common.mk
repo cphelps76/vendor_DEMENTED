@@ -90,10 +90,8 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/xbin/bash:system/xbin/bash \
     vendor/DEMENTED-Droid/proprietary/common/xbin/zipalign:system/xbin/zipalign \
 
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/DEMENTED-Droid/proprietary/common/app/SuperSU.apk:system/app/SuperSU.apk \
-    vendor/DEMENTED-Droid/proprietary/common/xbin/su:system/xbin/su
+# Koush Superuser
+SUPERUSER_EMBEDDED := true
     
 # Common etc files
 PRODUCT_COPY_FILES += \
