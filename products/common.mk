@@ -100,9 +100,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/DEMENTED-Droid/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf 
 
-# BEATS Audio
-include vendor/DEMENTED-Droid/products/beats_audio.mk
-
 # Common scripts
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/xbin/cpuinfo:system/xbin/cpuinfo \
