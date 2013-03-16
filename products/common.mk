@@ -20,6 +20,7 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Apollo \
+    DCWallpapers \
     DEMENTEDBeats \
     DEMENTED-Droid \
     DEMENTEDFiles \
