@@ -204,7 +204,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/beats/lib/libsrscorehtc.so:system/lib/libsrscorehtc.so \
     vendor/DEMENTED-Droid/proprietary/common/beats/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
     vendor/DEMENTED-Droid/proprietary/common/beats/lib/libswiqisettinghelper.so:system/lib/libswiqisettinghelper.so \
-    vendor/DEMENTED-Droid/proprietary/common/beats/lib/libtinyalsa.so:system/lib/libtinyalsa.so \
     vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libaudiopreprocessing.so:system/lib/soundfx/libaudiopreprocessing.so \
     vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libbeatsbass.so:system/lib/soundfx/libbeatsbass.so \
     vendor/DEMENTED-Droid/proprietary/common/beats/lib/soundfx/libbundlewrapper.so:system/lib/soundfx/libbundlewrapper.so \
