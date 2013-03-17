@@ -41,13 +41,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/01dementedbomb:system/etc/init.d/01dementedbomb \
-    vendor/DEMENTED-Droid/proprietary/grouper/etc/init.d/02dementedkernelgrouper:system/etc/init.d/02dementedkernelgrouper \
+    vendor/DEMENTED-Droid/proprietary/grouper/init.d/02dementedkernelgrouper:system/etc/init.d/02dementedkernelgrouper \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/DEMENTED-Droid/proprietary/grouper/etc/init.d/03dementedgovgrouper:system/etc/init.d/03dementedgovgrouper \
+    vendor/DEMENTED-Droid/proprietary/grouper/init.d/03dementedgovgrouper:system/etc/init.d/03dementedgovgrouper \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/04dementededt_tweaks:system/etc/init.d/04dementededt_tweaks \
-    vendor/DEMENTED-Droid/proprietary/grouper/etc/init.d/05dementedfsgrouper:system/etc/init.d/05dementedfsgrouper \
+    vendor/DEMENTED-Droid/proprietary/grouper/init.d/05dementedfsgrouper:system/etc/init.d/05dementedfsgrouper \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/80dementedloopysmoothnesstweak:system/etc/init.d/80dementedloopysmoothnesstweak \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/91dementedzipalign:system/etc/init.d/91dementedzipalign \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/97dementedtcp:system/etc/init.d/97dementedtcp \
     vendor/DEMENTED-Droid/proprietary/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    vendor/DEMENTED-Droid/proprietary/grouper/etc/init.d/99dementedsystemgrouper:system/etc/init.d/99dementedsystemgrouper 
+    vendor/DEMENTED-Droid/proprietary/grouper/init.d/99dementedsystemgrouper:system/etc/init.d/99dementedsystemgrouper 
