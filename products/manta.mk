@@ -8,7 +8,7 @@ $(call inherit-product, vendor/DEMENTED-Droid/products/common.mk)
 PRODUCT_PACKAGE_OVERLAYS += vendor/DEMENTED-Droid/overlay/manta
 
 # Setup device specific product configuration
-PRODUCT_NAME := aokp_manta
+PRODUCT_NAME := DEMENTED_Droid_manta
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := manta
 PRODUCT_MODEL := Nexus 10
