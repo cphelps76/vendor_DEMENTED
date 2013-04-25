@@ -26,7 +26,8 @@ PRODUCT_PACKAGES += \
     DEMENTEDFiles \
     DEMENTEDHome \
     Gallery2 \
-    LockClock
+    LockClock \
+    PermissionsManager
 
 # Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
