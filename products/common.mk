@@ -103,12 +103,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/DEMENTED-Droid/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf 
 
-# Backup Tool
-#PRODUCT_COPY_FILES += \
-#    vendor/DEMENTED-Droid/tools/bin/backuptool.sh:system/bin/backuptool.sh \
-#    vendor/DEMENTED-Droid/tools/bin/backuptool.functions:system/bin/backuptool.functions \
-#    vendor/DEMENTED-Droid/tools/bin/50-demented.sh:system/addon.d/50-demented.sh \
-
 # BEATS Audio
 include vendor/DEMENTED-Droid/products/beats_audio.mk
 
