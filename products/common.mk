@@ -106,6 +106,11 @@ PRODUCT_COPY_FILES += \
 # BEATS Audio
 include vendor/DEMENTED-Droid/products/beats_audio.mk
 
+# Installer
+PRODUCT_COPY_FILES += \
+    vendor/DEMENTED-Droid/tools/persist/persist.sh:install/bin/persist.sh \
+    vendor/DEMENTED-Droid/tools/persist/persist.conf:system/etc/persist.conf
+
 # Common scripts
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/xbin/cpuinfo:system/xbin/cpuinfo \
