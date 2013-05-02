@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
     DEMENTED-Droid \
     DEMENTEDFiles \
     DEMENTEDHome \
-    FmRadio \
     Gallery2 \
     LockClock \
     PermissionsManager
