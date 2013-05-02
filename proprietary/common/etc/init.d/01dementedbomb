@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# csphelps76
+#
 # SQLite Vacuuming
 #
 for i in \

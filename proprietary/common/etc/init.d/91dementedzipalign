@@ -1,6 +1,4 @@
 #!/system/bin/sh
-# cphelps76
-# Demented Zipalign
 
 
 LOG_FILE=/data/zipalign.log
