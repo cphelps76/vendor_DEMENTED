@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/Maps.apk:system/app/Maps.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/NotificationsWidget.apk:system/app/NotificationsWidget.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Phonesky.apk:system/app/Phonesky.apk \
