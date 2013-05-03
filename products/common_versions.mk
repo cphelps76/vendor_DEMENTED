@@ -7,4 +7,4 @@ PRODUCT_VERSION_MAJOR = 10
 PRODUCT_VERSION_MINOR = 0
  
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.modversion=DEMENTED-Droid-$(DEMENTED_VERSION)-$(shell date +"%m-%d-%y")
+ro.modversion=DEMENTED-Droid-$(shell date +"%m-%d-%y")
