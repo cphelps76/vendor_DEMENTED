@@ -68,6 +68,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/etc/updatecmds/google_generic_update.txt:system/etc/updatecmds/google_generic_update.txt \
     vendor/DEMENTED-Droid/proprietary/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     vendor/DEMENTED-Droid/proprietary/common/lib/libchromeview.so:system/lib/libchromeview.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libearthandroid.so:system/lib/libearthandroid.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libearthmobile.so:system/lib/libearthmobile.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
