@@ -34,7 +34,6 @@
         <item>BATTERY</item>
         <item>AIRPLANE_MODE</item>
         <item>BLUETOOTH</item>
-        <item>SWAGGER</item>
         <item>SILENT</item>
         <item>SOUNDSTATE</item>
         <item>SYNC</item>
@@ -55,7 +54,6 @@
         <item>@string/toggle_battery</item>
         <item>@string/toggle_airplane_mode</item>
         <item>@string/toggle_bluetooth</item>
-        <item>@string/toggle_swagger</item>
         <item>@string/toggle_silent</item>
         <item>@string/toggle_sound_state</item>
         <item>@string/toggle_sync</item>
