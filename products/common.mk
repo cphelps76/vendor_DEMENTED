@@ -21,7 +21,6 @@ include vendor/DEMENTED-Droid/products/themes_common.mk
 # Additional DEMENTED-Droid Apps
 PRODUCT_PACKAGES += \
     Apollo \
-    DCWallpapers \
     DEMENTEDBeats \
     DEMENTED-Droid \
     DEMENTEDFiles \
@@ -35,7 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleVoice.apk:system/app/GoogleVoice.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Chrome.apk:system/app/Chrome.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Earth.apk:system/app/Earth.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
@@ -67,6 +65,8 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/etc/preferred-apps/google.xml:system/etc/preferred-apps/google.xml \
     vendor/DEMENTED-Droid/proprietary/common/etc/updatecmds/google_generic_update.txt:system/etc/updatecmds/google_generic_update.txt \
     vendor/DEMENTED-Droid/proprietary/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libAppDataSearch.so:system/lib/libAppDataSearch.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libchromeview.so:system/lib/libchromeview.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libearthandroid.so:system/lib/libearthandroid.so \
