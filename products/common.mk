@@ -34,7 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleVoice.apk:system/app/GoogleVoice.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Earth.apk:system/app/Earth.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
