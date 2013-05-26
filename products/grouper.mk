@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/DEMENTED-Droid/proprietary/grouper/media/bootanimation.zip:system/media/bootanimation.zip \
     vendor/DEMENTED-Droid/proprietary/tuna/media/audio/notifications/Nexus.mp3:system/media/audio/notifications/Nexus.mp3 \
     vendor/DEMENTED-Droid/proprietary/tuna/media/audio/notifications/Simple_High.mp3:system/media/audio/notifications/Simple_High.mp3 \
+    vendor/DEMENTED-Droid/proprietary/tuna/media/audio/ringtones/AIB2.m4a:system/media/audio/ringtones/AIB2.m4a \
     vendor/DEMENTED-Droid/proprietary/tuna/media/audio/ringtones/Halo.m4a:system/media/audio/ringtones/Halo.m4a \
     vendor/DEMENTED-Droid/proprietary/common/app/Wallet.apk:system/app/Wallet.apk
 
