@@ -27,12 +27,11 @@ PRODUCT_PACKAGES += \
     DEMENTEDHome \
     Gallery2 \
     LockClock \
-    PermissionsManager
+    PermissionsManager \
+    QuickSearchBox
 
 # Common DEMENTED-Droid apps and libs
 PRODUCT_COPY_FILES += \
-    vendor/DEMENTED-Droid/proprietary/common/app/GoogleVoice.apk:system/app/GoogleVoice.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
@@ -45,16 +44,15 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
+    vendor/DEMENTED-Droid/proprietary/common/app/GoogleVoice.apk:system/app/GoogleVoice.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GmsCore.apk:system/app/GmsCore.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/LatinIMEDictionaryPack.apk:system/app/LatinIMEDictionaryPack.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Maps.apk:system/app/Maps.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Street.apk:system/app/Street.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Talk.apk:system/app/Talk.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Talkback.apk:system/app/Talkback.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Velvet.apk:system/app/Velvet.apk \
@@ -67,11 +65,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libAppDataSearch.so:system/lib/libAppDataSearch.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
-    vendor/DEMENTED-Droid/proprietary/common/lib/libchromeview.so:system/lib/libchromeview.so \
-    vendor/DEMENTED-Droid/proprietary/common/lib/libearthandroid.so:system/lib/libearthandroid.so \
-    vendor/DEMENTED-Droid/proprietary/common/lib/libearthmobile.so:system/lib/libearthmobile.so \
-    vendor/DEMENTED-Droid/proprietary/common/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
-    vendor/DEMENTED-Droid/proprietary/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
