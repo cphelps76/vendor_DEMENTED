@@ -65,6 +65,8 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/lib/libAppDataSearch.so:system/lib/libAppDataSearch.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
+    vendor/DEMENTED-Droid/proprietary/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
     vendor/DEMENTED-Droid/proprietary/common/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
