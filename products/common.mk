@@ -46,6 +46,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GoogleVoice.apk:system/app/GoogleVoice.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/GmsCore.apk:system/app/GmsCore.apk \
+    vendor/DEMENTED-Droid/proprietary/common/app/Hangout.apk:system/app/Hangout.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/LatinIMEDictionaryPack.apk:system/app/LatinIMEDictionaryPack.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
@@ -53,7 +54,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED-Droid/proprietary/common/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/DEMENTED-Droid/proprietary/common/app/Talk.apk:system/app/Talk.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Talkback.apk:system/app/Talkback.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/Velvet.apk:system/app/Velvet.apk \
     vendor/DEMENTED-Droid/proprietary/common/app/YouTube.apk:system/app/YouTube.apk \
