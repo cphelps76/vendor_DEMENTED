@@ -1,5 +1,7 @@
 # add_lunch_combo DEMENTED_Droid_grouper-user
 add_lunch_combo DEMENTED_Droid_grouper-userdebug
+# add_lunch_combo DEMENTED_Droid_jflteatt-user
+add_lunch_combo DEMENTED_Droid_jflteatt-userdebug
 # add_lunch_combo DEMENTED_Droid_maguro-user
 add_lunch_combo DEMENTED_Droid_maguro-userdebug
 # add_lunch_combo DEMENTED_Droid_mako-user
