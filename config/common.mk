@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
     PermissionsManager \
     PhaseBeam \
     PhotoTable \
-    QuickSearchBox \
     Torch \
     Wallpapers 
 
@@ -111,6 +110,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/prebuilt/demented/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/DEMENTED/prebuilt/demented/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
     vendor/DEMENTED/prebuilt/demented/app/Phonesky.apk:system/app/Phonesky.apk \
+    vendor/DEMENTED/prebuilt/demented/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED/prebuilt/demented/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/DEMENTED/prebuilt/demented/app/Talkback.apk:system/app/Talkback.apk \
     vendor/DEMENTED/prebuilt/demented/app/Thinkfree.apk:system/app/Thinkfree.apk \
