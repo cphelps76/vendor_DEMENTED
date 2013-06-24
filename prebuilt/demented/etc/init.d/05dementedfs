@@ -1,4 +1,5 @@
 #!/system/bin/sh
+# cphelps76
 
 # IO
 BLOCK_DEVS=`ls -d /sys/block/mmc*`;

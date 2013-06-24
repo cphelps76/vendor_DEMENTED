@@ -1,4 +1,11 @@
 #!/system/bin/sh
+# cphelps76
+
+LOG_FILE=/data/dementedkernel.log
+
+if [ -e $LOG_FILE ]; then
+	rm $LOG_FILE;
+fi;
 
 # Kernel Tweaks
 #

@@ -1,29 +1,36 @@
 #!/system/bin/sh
-
-# enable sysctl tweaks
+# cphelps76
 #
 sysctl -p /system/etc/sysctl.conf
 
+busybox rm -f /cache/*.apk
+busybox rm -f /cache/*.tmp
+busybox rm -f /data/dalvik-cache/*.apk
+busybox rm -f /data/dalvik-cache/*.tmp
 
-#Hyper
+# Clear cache's
 #
+rm -f /cache/*.apk
+rm -f /cache/*.tmp
+rm -f /data/dalvik-cache/*.apk
+rm -f /data/dalvik-cache/*.tmp
 sysctl -w vm.overcommit_memory=1
 sysctl -w vm.page-cluster=3
 sysctl -w vm.drop_caches=3
 
 
 # SD Card Speed Boost
+#
 if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]; then
   echo 2048 > /sys/devices/virtual/bdi/179:0/read_ahead_kb
 fi
 
-#Battery
+# Battery
 #
 busybox sysctl -w vm.dirty_expire_centisecs=1000
 busybox sysctl -w vm.dirty_writeback_centisecs=2000
 busybox sysctl -w kernel.random.write_wakeup_threshold=256
 busybox sysctl -w kernel.random.read_wakeup_threshold=128
-
 
 # Optimize Vm
 #
@@ -52,7 +59,8 @@ if [ -f "\$i" ]; then
 	echo "cfq" > \$i;
 fi
 
-#SQlite Database
+# SQlite Database
+#
 for i in `busybox find /d* -iname "*.db"`; do
 	sqlite3 $i 'VACUUM;';
 	sqlite3 $i 'REINDEX;';

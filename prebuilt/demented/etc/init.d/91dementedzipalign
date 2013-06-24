@@ -1,4 +1,5 @@
 #!/system/bin/sh
+# cphelps76
 
 
 LOG_FILE=/data/zipalign.log
