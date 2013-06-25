@@ -4,7 +4,6 @@
 PRODUCT_COPY_FILES += \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/01dementedkernel:system/etc/init.d/01dementedkernel \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/DEMENTED/prebuilt/demented/etc/init.d/03dementedcpuclock:system/etc/init.d/03dementedcpuclock \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/04dementededt_tweaks:system/etc/init.d/04dementededt_tweaks \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/05dementedfs:system/etc/init.d/05dementedfs \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/80dementedloopysmoothnesstweak:system/etc/init.d/80dementedloopysmoothnesstweak \
