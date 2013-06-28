@@ -10,7 +10,6 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/91dementedzipalign:system/etc/init.d/91dementedzipalign \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/97dementedtcp:system/etc/init.d/97dementedtcp \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/99dementedsystem:system/etc/init.d/99dementedsystem \
-    vendor/DEMENTED/prebuilt/demented/etc/init.d/movecache:system/etc/init.d/movecache \
     vendor/DEMENTED/prebuilt/demented/etc/init.d/98tweaks:system/etc/init.d/98tweaks
 
 # sysctl.conf
