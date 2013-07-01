@@ -4,5 +4,6 @@ add_lunch_combo demented_jfltetmo-userdebug
 add_lunch_combo demented_jfltevzw-userdebug
 add_lunch_combo demented_maguro-userdebug
 add_lunch_combo demented_mako-userdebug
+add_lunch_combo demented_n8013-userdebug
 add_lunch_combo demented_toro-userdebug
 
