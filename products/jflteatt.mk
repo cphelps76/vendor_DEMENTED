@@ -18,4 +18,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jflteuc TARGET_DEVICE=jflteatt BUIL
 
 # boot animation
 PRODUCT_COPY_FILES += \
-       vendor/aokp/prebuilt/bootanimation/xxhdpi/bootanimation.zip:system/media/bootanimation.zip
+       vendor/demented/prebuilt/bootanimation/xxhdpi/bootanimation.zip:system/media/bootanimation.zip
