@@ -61,8 +61,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Scandium.ogg
 
-PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
-
 # Set DEMENTED build info
 PLATFORM_VERSION_CODENAME=UNOFFICIAL
 DEMENTED_VERSION := "DEMENTED"-$(shell date +"%m-%d-%y")

@@ -37,7 +37,6 @@ PRODUCT_COPY_FILES += \
     vendor/demented/prebuilt/demented/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
     vendor/demented/prebuilt/demented/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     vendor/demented/prebuilt/demented/etc/permissions/features.xml:system/etc/permissions/features.xml \
-    vendor/demented/prebuilt/demented/etc/g.prop:system/etc/g.prop \
     vendor/demented/prebuilt/demented/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     vendor/demented/prebuilt/demented/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
     vendor/demented/prebuilt/demented/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
