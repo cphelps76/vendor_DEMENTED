@@ -3,8 +3,7 @@
 # Squish a CM otapackage for distribution
 # cyanogen
 #
-
-. $ANDROID_BUILD_TOP/vendor/demented/tools/colors
+. $ANDROID_BUILD_TOP/vendor/DEMENTED/tools/functions
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -25,7 +24,7 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/demented/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/DEMENTED/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_LIBS="libc_malloc_debug_leak.so libc_malloc_debug_qemu.so"
