@@ -167,5 +167,5 @@ PLATFORM_VERSION_CODENAME=UNOFFICIAL
 DEMENTED_VERSION := "DEMENTED"-$(shell date +"%m-%d-%y")
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.demented.version=$(DC_VERSION) \
-  ro.modversion=DEMENTED-$(DC_VERSION)
+  ro.demented.version=$(DEMENTED_VERSION) \
+  ro.modversion=DEMENTED-$(DEMENTED_VERSION)
