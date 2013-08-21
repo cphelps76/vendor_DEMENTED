@@ -1,7 +1,7 @@
 PRODUCT_BRAND ?= DEMENTED
 
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.dc.superuser
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.demented.superuser
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=DEMENTED
