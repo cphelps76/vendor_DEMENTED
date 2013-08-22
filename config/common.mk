@@ -122,7 +122,8 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     DCWallpapers \
     Apollo \
-    DEMENTEDFiles
+    DEMENTEDFiles \
+    LockClock
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
