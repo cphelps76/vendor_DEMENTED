@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
     DCWallpapers \
     Apollo \
     DEMENTEDFiles \
+    DEMENTEDHome \
     LockClock
 
 PRODUCT_PACKAGES += \
