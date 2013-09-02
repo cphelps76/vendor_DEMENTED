@@ -23,12 +23,12 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/prebuilt/demented/app/MediaUploader.apk:system/app/ediaUploader.apk \
     vendor/DEMENTED/prebuilt/demented/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/DEMENTED/prebuilt/demented/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
-    vendor/DEMENTED/prebuilt/demented/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/DEMENTED/prebuilt/demented/app/PlayGames.apk:system/app/PlayGames.apk \
     vendor/DEMENTED/prebuilt/demented/app/PlusOne.apk:system/app/PlusOne.apk \
     vendor/DEMENTED/prebuilt/demented/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/DEMENTED/prebuilt/demented/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/DEMENTED/prebuilt/demented/app/Street.apk:system/app/Street.apk \
+    vendor/DEMENTED/prebuilt/demented/app/Vending.apk:system/app/Vending.apk \
     vendor/DEMENTED/prebuilt/demented/app/Videos.apk:system/app/Videos.apk \
     vendor/DEMENTED/prebuilt/demented/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
     vendor/DEMENTED/prebuilt/demented/app/Wallet.apk:system/app/Wallet.apk \
