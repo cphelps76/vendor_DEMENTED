@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/prebuilt/demented/app/Videos.apk:system/app/Videos.apk \
     vendor/DEMENTED/prebuilt/demented/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
     vendor/DEMENTED/prebuilt/demented/app/Wallet.apk:system/app/Wallet.apk \
-    vendor/DEMENTED/prebuilt/demented/app/Youtube.apk:system/app/YouTube.apk \
+    vendor/DEMENTED/prebuilt/demented/app/YouTube.apk:system/app/YouTube.apk \
     vendor/DEMENTED/prebuilt/demented/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
     vendor/DEMENTED/prebuilt/demented/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
     vendor/DEMENTED/prebuilt/demented/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
