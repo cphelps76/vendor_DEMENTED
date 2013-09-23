@@ -105,7 +105,6 @@ include vendor/DEMENTED/config/themes_common.mk
 
 # Required DEMENTED packages
 PRODUCT_PACKAGES += \
-    Focal \
     Development \
     LatinIME \
     Superuser \
