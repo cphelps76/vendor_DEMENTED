@@ -50,6 +50,7 @@ PRODUCT_COPY_FILES += \
     vendor/DEMENTED/prebuilt/demented/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/DEMENTED/prebuilt/demented/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
     vendor/DEMENTED/prebuilt/demented/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/DEMENTED/prebuilt/demented/lib/libocrclient.so:system/lib/libocrclient.so \
     vendor/DEMENTED/prebuilt/demented/lib/libplus_jni_v8.so:system/lib/libplus_jni_v8.so \
     vendor/DEMENTED/prebuilt/demented/lib/librs.antblur.so:system/lib/librs.antblur.so \
     vendor/DEMENTED/prebuilt/demented/lib/librs.antblur_constant.so:system/lib/librs.antblur_constant.so \
