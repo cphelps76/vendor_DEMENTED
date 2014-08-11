@@ -1,2 +1,1 @@
-add_lunch_combo demented_jflteatt-userdebug
-add_lunch_combo demented_jfltevzw-userdebug
+add_lunch_combo demented_flo-userdebug
