@@ -222,8 +222,8 @@ PRODUCT_PACKAGES += \
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
-    vendor/DEMENTED/proprietary/Term.apk:system/app/Term.apk \
-    vendor/DEMENTED/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+    vendor/DEMENTED/prebuilt/common/apps/Term.apk:system/app/Term.apk \
+    vendor/DEMENTED/prebuilt/common/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
