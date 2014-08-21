@@ -1,7 +1,7 @@
-PRODUCT_BRAND ?= cyanogenmod
+PRODUCT_BRAND ?= demented
 
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.demented.superuser
 
 # To deal with CM9 specifications
 # TODO: remove once all devices have been switched
@@ -29,7 +29,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/cm/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/DEMENTED/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -45,10 +45,10 @@ $(eval TARGET_BOOTANIMATION_NAME := $(shell \
 endef
 $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
 
-PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
+PRODUCT_BOOTANIMATION := vendor/DEMENTED/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
 endif
 
-ifdef CM_NIGHTLY
+ifdef DEMENTED_NIGHTLY
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=cyanogenmodnightly
 else
@@ -85,43 +85,43 @@ endif
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
-    vendor/cm/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/DEMENTED/CHANGELOG.mkdn:system/etc/CHANGELOG-DD.txt
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/cm/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/cm/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/DEMENTED/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/DEMENTED/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/DEMENTED/prebuilt/common/bin/50-demented.sh:system/addon.d/50-demented.sh \
+    vendor/DEMENTED/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/DEMENTED/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/DEMENTED/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/DEMENTED/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/DEMENTED/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
-# CM-specific init file
+# DEMENTED-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/DEMENTED/prebuilt/common/etc/init.local.rc:root/init.demented.rc
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/bin/compcache:system/bin/compcache \
-    vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
+    vendor/DEMENTED/prebuilt/common/bin/compcache:system/bin/compcache \
+    vendor/DEMENTED/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/cm/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/cm/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/DEMENTED/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/DEMENTED/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -133,10 +133,10 @@ PRODUCT_COPY_FILES += \
 
 # This is CM!
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    vendor/DEMENTED/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # T-Mobile theme engine
-include vendor/cm/config/themes_common.mk
+include vendor/DEMENTED/config/themes_common.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \
@@ -222,8 +222,8 @@ PRODUCT_PACKAGES += \
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
-    vendor/cm/proprietary/Term.apk:system/app/Term.apk \
-    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+    vendor/DEMENTED/proprietary/Term.apk:system/app/Term.apk \
+    vendor/DEMENTED/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
@@ -237,80 +237,80 @@ endif
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/DEMENTED/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/DEMENTED/overlay/common
 
 PRODUCT_VERSION_MAJOR = 10
 PRODUCT_VERSION_MINOR = 2
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
 
-# Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
+# Set DEMENTED_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
-ifndef CM_BUILDTYPE
+ifndef DEMENTED_BUILDTYPE
     ifdef RELEASE_TYPE
-        # Starting with "CM_" is optional
+        # Starting with "DEMENTED_" is optional
         RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^CM_||g')
-        CM_BUILDTYPE := $(RELEASE_TYPE)
+        DEMENTED_BUILDTYPE := $(RELEASE_TYPE)
     endif
 endif
 
 # Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
-    CM_BUILDTYPE :=
+ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(DEMENTED_BUILDTYPE)),)
+    DEMENTED_BUILDTYPE :=
 endif
 
-ifdef CM_BUILDTYPE
-    ifneq ($(CM_BUILDTYPE), SNAPSHOT)
-        ifdef CM_EXTRAVERSION
+ifdef DEMENTED_BUILDTYPE
+    ifneq ($(DEMENTED_BUILDTYPE), SNAPSHOT)
+        ifdef DEMENTED_EXTRAVERSION
             # Force build type to EXPERIMENTAL
-            CM_BUILDTYPE := EXPERIMENTAL
-            # Remove leading dash from CM_EXTRAVERSION
-            CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to CM_EXTRAVERSION
-            CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
+            DEMENTED_BUILDTYPE := EXPERIMENTAL
+            # Remove leading dash from DEMENTED_EXTRAVERSION
+            DEMENTED_EXTRAVERSION := $(shell echo $(DEMENTED_EXTRAVERSION) | sed 's/-//')
+            # Add leading dash to DEMENTED_EXTRAVERSION
+            DEMENTED_EXTRAVERSION := -$(DEMENTED_EXTRAVERSION)
         endif
     else
-        ifndef CM_EXTRAVERSION
+        ifndef DEMENTED_EXTRAVERSION
             # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            CM_BUILDTYPE := EXPERIMENTAL
+            DEMENTED_BUILDTYPE := EXPERIMENTAL
         else
-            # Remove leading dash from CM_EXTRAVERSION
-            CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to CM_EXTRAVERSION
-            CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
+            # Remove leading dash from DEMENTED_EXTRAVERSION
+            DEMENTED_EXTRAVERSION := $(shell echo $(DEMENTED_EXTRAVERSION) | sed 's/-//')
+            # Add leading dash to DEMENTED_EXTRAVERSION
+            DEMENTED_EXTRAVERSION := -$(DEMENTED_EXTRAVERSION)
         endif
     endif
 else
-    # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
-    CM_EXTRAVERSION :=
+    # If DEMENTED_BUILDTYPE is not defined, set to UNOFFICIAL
+    DEMENTED_BUILDTYPE := UNOFFICIAL
+    DEMENTED_EXTRAVERSION :=
 endif
 
-ifeq ($(CM_BUILDTYPE), RELEASE)
+ifeq ($(DEMENTED_BUILDTYPE), RELEASE)
     ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(CM_BUILD)
+        DEMENTED_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(DEMENTED_BUILD)
     else
         ifeq ($(TARGET_BUILD_VARIANT),user)
-            CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD)
+            DEMENTED_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(DEMENTED_BUILD)
         else
-            CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(CM_BUILD)
+            DEMENTED_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(DEMENTED_BUILD)
         endif
     endif
 else
     ifeq ($(PRODUCT_VERSION_MINOR),0)
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+        DEMENTED_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(DEMENTED_BUILDTYPE)$(DEMENTED_EXTRAVERSION)-$(DEMENTED_BUILD)
     else
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+        DEMENTED_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(DEMENTED_BUILDTYPE)$(DEMENTED_EXTRAVERSION)-$(DEMENTED_BUILD)
     endif
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(CM_VERSION) \
-  ro.modversion=$(CM_VERSION) \
+  ro.demented.version=$(DEMENTED_VERSION) \
+  ro.modversion=$(DEMENTED_VERSION) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
--include vendor/cm/sepolicy/sepolicy.mk
+-include vendor/DEMENTED/sepolicy/sepolicy.mk
 
--include vendor/cm-priv/keys/keys.mk
+-include vendor/demented-priv/keys/keys.mk
 
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
