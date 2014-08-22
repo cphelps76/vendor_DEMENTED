@@ -73,9 +73,8 @@ $SED -i \
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.demented\.version/s/^.*=//p' $OUT/system/build.prop`
-TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
 echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
-OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
+OUTFILE=$OUT/DEMENTED-$MODVERSION.zip
 
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
