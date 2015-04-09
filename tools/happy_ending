@@ -1,0 +1,97 @@
+#!/bin/bash
+
+. $ANDROID_BUILD_TOP/vendor/demented/tools/colors
+
+OUT_TARGET_HOST=`uname -a | grep Darwin`
+if [ -z "$OUT_TARGET_HOST" ]
+then
+   MD5=md5sum
+   SED=sed
+else
+   MD5="md5 -r "
+   SED=gsed
+fi
+
+# manipulate TARGET_PRODUCT to give us just device
+BUILD_PROP=${OUT}/system/build.prop
+DEVICE=$(cat ${BUILD_PROP} | grep ro.demented.device | cut -d '=' -f2)
+demented_DEVICE=$(echo ${TARGET_PRODUCT} | cut -d '_' -f2)
+
+FIRMWARE_REVISION=$(cat ${BUILD_PROP} | grep ro.demented.firmware.version | cut -f2 -d "=")
+
+# Full path to firmware zip package
+OUTFILE=${OUT}/${TARGET_PRODUCT}_${FIRMWARE_REVISION}.zip
+ZIPSIZE=`ls -lah ${OUTFILE} | awk '{ print $5}' `
+
+# md5sum of zip package
+$MD5 ${OUTFILE} >${OUTFILE}.md5sum
+MD5SUM=$(cat ${OUTFILE}.md5sum | cut -d " " -f1)
+
+# Timestamp of build completion extracted from build.prop
+TIMESTAMP=$(sed -n -e'/ro\.build\.date\.utc/s/^.*=//p' ${BUILD_PROP})
+
+# Determine the release from the $FIRMWARE_REVISION
+IFS=.
+read -a array <<< "$FIRMWARE_REVISION"
+case ${#array[@]} in
+    1) CHANNEL=STABLE ;;
+    2) CHANNEL=STABLE ;;
+    3) CHANNEL=STABLE ;;
+    4) CHANNEL=EXPERIMENTAL ;;
+esac
+
+# API Level
+api_levels=($(ls $ANDROID_BUILD_TOP/prebuilts/sdk/api | cut -d '.' -f1))
+IFS=$'\n'
+API_LEVEL=$(echo "${api_levels[*]}" | sort -nr | head -n1)
+
+# cat all the install info > $OUT/factory_update_params.aml
+cat >${OUT}/factory_update_param.aml <<EOL
+--show_text
+--update_package=/sdcard/${TARGET_PRODUCT}_${FIRMWARE_REVISION}.zip
+--run_command=/system/bin/reboot
+EOL
+
+# cat update info (if needed) to > $OUT/update_info
+cat >${OUT}/update_info <<EOL
+FILENAME=${TARGET_PRODUCT}_${FIRMWARE_REVISION}.zip
+MD5=${MD5SUM}
+TIMESTAMP=${TIMESTAMP}
+CHANNEL=${CHANNEL}
+API_LEVEL=${API_LEVEL}
+DEVICE=${DEVICE}
+SUBDIRECTORY=${demented_DEVICE}
+EOL
+
+echo ""
+echo -e ${CL_INS}${CL_BLD}"  Package Complete:"
+echo -e ${CL_MAG}"      ${OUTFILE}"
+echo -e ${CL_INS}"  Package Size:"
+echo -e ${CL_MAG}"      ${ZIPSIZE}"
+echo -e ${CL_INS}"  APL Level:"
+echo -e ${CL_MAG}"      ${API_LEVEL}"
+echo -e ${CL_INS}"  MD5:"
+echo -e ${CL_MAG}"      ${MD5SUM}"
+echo -e ${CL_INS}"  Timestamp:"
+echo -e ${CL_MAG}"      ${TIMESTAMP}"
+echo -e ""
+
+# NOTE: to use this feature, you also need to get the nma.sh
+# shell script from http://storage.locked.io/files/nma.sh
+# everything else is pretty self explanatory. The api_key
+# file *is* in the .gitignore of this repo, so it will not
+# be tracked.
+if [[ $USE_NMA = true ]]; then
+    api_key=`cat $ANDROID_BUILD_TOP/vendor/demented/tools/api_key`
+    priority="0"
+    app_name="demented Build Notifier"
+    event=`date`
+    description="${TARGET_PRODUCT} Build complete!"
+
+    notify-my-android \
+                    -k "$api_key" \
+                    -p "$priority" \
+                    -a "$app_name" \
+                    -e "$event" \
+                    -d "$description"
+fi
