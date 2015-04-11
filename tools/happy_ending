@@ -17,22 +17,21 @@ BUILD_PROP=${OUT}/system/build.prop
 DEVICE=$(cat ${BUILD_PROP} | grep ro.demented.device | cut -d '=' -f2)
 demented_DEVICE=$(echo ${TARGET_PRODUCT} | cut -d '_' -f2)
 
-FIRMWARE_REVISION=$(cat ${BUILD_PROP} | grep ro.demented.firmware.version | cut -f2 -d "=")
+DEVICE_REVISION=$(cat ${BUILD_PROP} | grep ro.demented.version | cut -f2 -d "=")
 
 # Full path to firmware zip package
-OUTFILE=${OUT}/${TARGET_PRODUCT}_${FIRMWARE_REVISION}.zip
-ZIPSIZE=`ls -lah ${OUTFILE} | awk '{ print $5}' `
+OUTFILE="demented"-${DEVICE_REVISION}.zip
+ZIPSIZE=`ls -lah ${OUT}/${OUTFILE} | awk '{ print $5}' `
 
 # md5sum of zip package
-$MD5 ${OUTFILE} >${OUTFILE}.md5sum
-MD5SUM=$(cat ${OUTFILE}.md5sum | cut -d " " -f1)
+MD5SUM=$(cat ${OUT}/${OUTFILE}.md5sum | cut -d " " -f1)
 
 # Timestamp of build completion extracted from build.prop
 TIMESTAMP=$(sed -n -e'/ro\.build\.date\.utc/s/^.*=//p' ${BUILD_PROP})
 
-# Determine the release from the $FIRMWARE_REVISION
+# Determine the release from the $DEVICE_REVISION
 IFS=.
-read -a array <<< "$FIRMWARE_REVISION"
+read -a array <<< "$DEVICE_REVISION"
 case ${#array[@]} in
     1) CHANNEL=STABLE ;;
     2) CHANNEL=STABLE ;;
@@ -48,13 +47,12 @@ API_LEVEL=$(echo "${api_levels[*]}" | sort -nr | head -n1)
 # cat all the install info > $OUT/factory_update_params.aml
 cat >${OUT}/factory_update_param.aml <<EOL
 --show_text
---update_package=/sdcard/${TARGET_PRODUCT}_${FIRMWARE_REVISION}.zip
+--update_package=/sdcard/${TARGET_PRODUCT}_${DEVICE_REVISION}.zip
 --run_command=/system/bin/reboot
 EOL
 
 # cat update info (if needed) to > $OUT/update_info
 cat >${OUT}/update_info <<EOL
-FILENAME=${TARGET_PRODUCT}_${FIRMWARE_REVISION}.zip
 MD5=${MD5SUM}
 TIMESTAMP=${TIMESTAMP}
 CHANNEL=${CHANNEL}
@@ -63,17 +61,26 @@ DEVICE=${DEVICE}
 SUBDIRECTORY=${demented_DEVICE}
 EOL
 
-echo ""
+    echo ""
+    echo -e ${CL_BLD}""
+    echo -e ${CL_INS}"     ___ _____ __  __  _____ _   _ _____ _____ ___   _____  __  "
+    echo -e "    | _ \  ___|  \/  ||  ___| \ | |_   _|  ___| _ \ |  ___|/_ |"
+    echo -e "    || || |__ | .  . || |__ |  \| | | | | |__ || || |___ \  | |"
+    echo -e "    || ||  __|| |\/| ||  __|| . | | | | |  __||| ||     \ \ | |"
+    echo -e "    ||//| |___| |  | || |___| |\  | | | | |___||//  /\__/ /_| |_"
+    echo -e "    |_/ \____/\_|  |_/\____/\_| \_/ \_/ \____/|_/   \____(_)___/"
+    echo ""
+    echo ""
 echo -e ${CL_INS}${CL_BLD}"  Package Complete:"
 echo -e ${CL_MAG}"      ${OUTFILE}"
 echo -e ${CL_INS}"  Package Size:"
 echo -e ${CL_MAG}"      ${ZIPSIZE}"
-echo -e ${CL_INS}"  APL Level:"
+echo -e ${CL_INS}"  API Level:"
 echo -e ${CL_MAG}"      ${API_LEVEL}"
 echo -e ${CL_INS}"  MD5:"
 echo -e ${CL_MAG}"      ${MD5SUM}"
 echo -e ${CL_INS}"  Timestamp:"
-echo -e ${CL_MAG}"      ${TIMESTAMP}"
+echo -e ${CL_MAG}"      ${TIMESTAMP}"${CL_RST}
 echo -e ""
 
 # NOTE: to use this feature, you also need to get the nma.sh
