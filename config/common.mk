@@ -89,9 +89,12 @@ PRODUCT_COPY_FILES += \
     vendor/demented/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/demented/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/demented/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+endif
 
 # DEMENTED-specific init file
 PRODUCT_COPY_FILES += \
@@ -121,7 +124,8 @@ include vendor/demented/config/themes_common.mk
 PRODUCT_PACKAGES += \
     Development \
     LatinIME \
-    BluetoothExt
+    BluetoothExt \
+    Profiles
 
 # Optional DEMENTED packages
 PRODUCT_PACKAGES += \
@@ -143,6 +147,12 @@ PRODUCT_PACKAGES += \
     CMAccount \
     CMHome \
     CyanogenSetupWizard
+
+# CM Platform Library
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.platform-res \
+    org.cyanogenmod.platform \
+    org.cyanogenmod.platform.xml
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
