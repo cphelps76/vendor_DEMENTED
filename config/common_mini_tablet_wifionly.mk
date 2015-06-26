@@ -4,6 +4,10 @@ $(call inherit-product, vendor/demented/config/common.mk)
 # Include DEMENTED audio files
 include vendor/demented/config/demented_audio.mk
 
+# Required CM packages
+PRODUCT_PACKAGES += \
+    LatinIME
+
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
