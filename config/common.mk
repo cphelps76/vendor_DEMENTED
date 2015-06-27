@@ -332,6 +332,9 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.display.version=$(DEMENTED_DISPLAY_VERSION)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.dd.version=$(DEMENTED_DISPLAY_VERSION)
+
 # CyanogenMod Platform SDK Version
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
