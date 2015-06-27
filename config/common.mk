@@ -286,6 +286,13 @@ else
     endif
 endif
 
+PLATFORM_VERSION_CODENAME += UNOFFICIAL
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+  ro.secure=0 \
+  ro.debuggable=1
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.root_access=3
+
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.demented.version=$(DEMENTED_VERSION) \
   ro.demented.releasetype=$(DEMENTED_BUILDTYPE) \
