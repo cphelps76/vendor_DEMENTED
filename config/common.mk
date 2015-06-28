@@ -66,11 +66,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
-
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
@@ -286,19 +281,20 @@ else
     endif
 endif
 
-PLATFORM_VERSION_CODENAME += UNOFFICIAL
+PLATFORM_VERSION_CODENAME=UNOFFICIAL
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
+  ro.adb.secure=0 \
   ro.secure=0 \
   ro.debuggable=1
+
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.root_access=3
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.demented.version=$(DEMENTED_VERSION) \
   ro.demented.releasetype=$(DEMENTED_BUILDTYPE) \
   ro.modversion=$(DEMENTED_VERSION) \
-  ro.cmlegal.url=https://cyngn.com/legal/privacy-policy \
-  ro.secure=0
+  ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
 -include vendor/cm-priv/keys/keys.mk
 
