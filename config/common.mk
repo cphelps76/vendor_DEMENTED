@@ -130,8 +130,7 @@ PRODUCT_PACKAGES += \
 
 # Custom DEMENTED packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Trebuchet \
+    DEMENTEDHome \
     AudioFX \
     CMWallpapers \
     CMFileManager \
@@ -287,8 +286,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
   ro.adb.secure=0 \
   ro.secure=0 \
   ro.debuggable=1
-
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.root_access=3
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.demented.version=$(DEMENTED_VERSION) \
