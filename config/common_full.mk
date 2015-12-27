@@ -13,14 +13,19 @@ PRODUCT_PACKAGES += \
     MagicSmokeWallpapers \
     NoiseField \
     PhaseBeam \
-    VisualizationWallpapers \
     PhotoTable \
     SoundRecorder \
     PhotoPhase
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
-    vim \
-    zip \
+    7z \
+    bash \
+    bzip2 \
+    curl \
+    powertop \
     unrar \
-    curl
+    unzip \
+    vim \
+    wget \
+    zip
