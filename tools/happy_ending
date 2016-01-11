@@ -39,27 +39,12 @@ case ${#array[@]} in
     4) CHANNEL=EXPERIMENTAL ;;
 esac
 
-# API Level
-api_levels=($(ls $ANDROID_BUILD_TOP/prebuilts/sdk/api | cut -d '.' -f1))
-IFS=$'\n'
-API_LEVEL=$(echo "${api_levels[*]}" | sort -nr | head -n1)
-
-# cat all the install info > $OUT/factory_update_params.aml
-cat >${OUT}/factory_update_param.aml <<EOL
---show_text
---update_package=/sdcard/${TARGET_PRODUCT}_${DEVICE_REVISION}.zip
---run_command=/system/bin/reboot
-EOL
-
-# cat update info (if needed) to > $OUT/update_info
-cat >${OUT}/update_info <<EOL
 MD5=${MD5SUM}
 TIMESTAMP=${TIMESTAMP}
 CHANNEL=${CHANNEL}
 API_LEVEL=${API_LEVEL}
 DEVICE=${DEVICE}
 SUBDIRECTORY=${demented_DEVICE}
-EOL
 
     echo ""
     echo -e ${CL_BLD}""
@@ -75,8 +60,6 @@ echo -e ${CL_INS}${CL_BLD}"  Package Complete:"
 echo -e ${CL_MAG}"      ${OUTFILE}"
 echo -e ${CL_INS}"  Package Size:"
 echo -e ${CL_MAG}"      ${ZIPSIZE}"
-echo -e ${CL_INS}"  API Level:"
-echo -e ${CL_MAG}"      ${API_LEVEL}"
 echo -e ${CL_INS}"  MD5:"
 echo -e ${CL_MAG}"      ${MD5SUM}"
 echo -e ${CL_INS}"  Timestamp:"
