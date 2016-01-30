@@ -1,1 +1,2 @@
 add_lunch_combo demented_find7-userdebug
+add_lunch_combo demented_flo-userdebug
