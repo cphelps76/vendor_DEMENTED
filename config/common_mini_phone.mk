@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/demented/config/common.mk)
 
 # Include DEMENTED audio files
-include vendor/demented/config/cm_audio.mk
+include vendor/demented/config/demented_audio.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \

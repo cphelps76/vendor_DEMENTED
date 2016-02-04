@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/demented/config/common.mk)
 
 # Include DEMENTED audio files
-include vendor/demented/config/cm_audio.mk
+include vendor/demented/config/demented_audio.mk
 
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -11,5 +11,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \
-        vendor/cm/prebuilt/common/bootanimation/800.zip:system/media/bootanimation.zip
+        vendor/demented/prebuilt/common/bootanimation/800.zip:system/media/bootanimation.zip
 endif
