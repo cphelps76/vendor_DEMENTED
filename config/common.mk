@@ -216,7 +216,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/demented/overlay/common
 PRODUCT_VERSION_MAJOR = 1
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
-PRODUCT_VERSION_MAINTENANCE = MAINLINE
 
 # Set DEMENTED_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
@@ -277,6 +276,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
   ro.debuggable=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
+  ro.demented.build = demented-$(PLATFORM_VERSION)
   ro.demented.version=$(DEMENTED_VERSION) \
   ro.demented.releasetype=$(DEMENTED_BUILDTYPE) \
   ro.modversion=$(DEMENTED_VERSION) \
