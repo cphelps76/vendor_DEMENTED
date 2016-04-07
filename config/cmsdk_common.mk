@@ -8,6 +8,7 @@ PRODUCT_COPY_FILES += \
     vendor/demented/config/permissions/org.cyanogenmod.telephony.xml:system/etc/permissions/org.cyanogenmod.telephony.xml \
     vendor/demented/config/permissions/org.cyanogenmod.performance.xml:system/etc/permissions/org.cyanogenmod.performance.xml \
     vendor/demented/config/permissions/org.cyanogenmod.partner.xml:system/etc/permissions/org.cyanogenmod.partner.xml
+    vendor/demented/config/permissions/org.cyanogenmod.weather.xml:system/etc/permissions/org.cyanogenmod.weather.xml
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
@@ -27,7 +28,7 @@ ifndef CM_PLATFORM_SDK_VERSION
   # the SDK are released.  It should only be incremented when the APIs for
   # the new release are frozen (so that developers don't write apps against
   # intermediate builds).
-  CM_PLATFORM_SDK_VERSION := 5
+  CM_PLATFORM_SDK_VERSION := 6
 endif
 
 ifndef CM_PLATFORM_REV

@@ -145,7 +145,8 @@ PRODUCT_PACKAGES += \
     DementedSetupWizard \
     CMSettingsProvider \
     ExactCalculator \
-    LiveLockScreenService
+    LiveLockScreenService \
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
