@@ -28,6 +28,7 @@ ifeq ($(TARGET_NEEDS_BOOSTED_SOUNDS),true)
 PRODUCT_COPY_FILES += \
 	$(RINGTONE_PATH)/boosted/Boxbeat.ogg:system/media/audio/ringtones/Boxbeat.ogg \
 	$(RINGTONE_PATH)/boosted/CyanTone.ogg:system/media/audio/ringtones/CyanTone.ogg \
+	$(RINGTONE_PATH)/boosted/Halo.m4a:system/media/audio/ringtones/boosted/Halo.ogg \
 	$(RINGTONE_PATH)/boosted/Highscore.ogg:system/media/audio/ringtones/Highscore.ogg \
 	$(RINGTONE_PATH)/boosted/Lyon.ogg:system/media/audio/ringtones/Lyon.ogg \
 	$(RINGTONE_PATH)/boosted/Rockin.ogg:system/media/audio/ringtones/Rockin.ogg
@@ -35,6 +36,7 @@ else
 PRODUCT_COPY_FILES += \
 	$(RINGTONE_PATH)/Boxbeat.ogg:system/media/audio/ringtones/Boxbeat.ogg \
 	$(RINGTONE_PATH)/CyanTone.ogg:system/media/audio/ringtones/CyanTone.ogg \
+	$(RINGTONE_PATH)/Halo.m4a:system/media/audio/ringtones/Halo.ogg \
 	$(RINGTONE_PATH)/Highscore.ogg:system/media/audio/ringtones/Highscore.ogg \
 	$(RINGTONE_PATH)/Lyon.ogg:system/media/audio/ringtones/Lyon.ogg \
 	$(RINGTONE_PATH)/Rockin.ogg:system/media/audio/ringtones/Rockin.ogg \
