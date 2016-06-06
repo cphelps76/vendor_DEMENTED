@@ -69,13 +69,11 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 endif
 
 # Backup Tool
-ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
     vendor/demented/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/demented/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/demented/prebuilt/common/bin/50-demented.sh:system/addon.d/50-demented.sh \
     vendor/demented/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-endif
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
