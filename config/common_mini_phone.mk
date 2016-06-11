@@ -1,17 +1,8 @@
-# Inherit common DEMENTED stuff
-$(call inherit-product, vendor/demented/config/common.mk)
-
-# Include DEMENTED audio files
-include vendor/demented/config/demented_audio.mk
+$(call inherit-product, vendor/demented/config/common_mini.mk)
 
 # Required CM packages
 PRODUCT_PACKAGES += \
     LatinIME
-
-# Default notification/alarm sounds
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Argon.ogg \
-    ro.config.alarm_alert=Helium.ogg
 
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \

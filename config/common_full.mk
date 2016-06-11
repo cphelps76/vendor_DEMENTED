@@ -1,6 +1,8 @@
 # Inherit common CM stuff
 $(call inherit-product, vendor/demented/config/common.mk)
 
+PRODUCT_SIZE := full
+
 # Include DEMENTED audio files
 include vendor/demented/config/demented_audio.mk
 
