@@ -33,14 +33,6 @@ PRODUCT_BOOTANIMATION := vendor/demented/prebuilt/common/bootanimation/$(TARGET_
 endif
 endif
 
-ifdef DEMENTED_NIGHTLY
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmodnightly
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmod
-endif
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -63,6 +55,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# Default notification/alarm sounds
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.notification_sound=Argon.ogg \
+    ro.config.alarm_alert=Helium.ogg
+
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
@@ -77,7 +74,7 @@ PRODUCT_COPY_FILES += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/demented/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -114,6 +111,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/demented/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# Include DEMENTED audio files
+include vendor/demented/config/demented_audio.mk
+
 # Theme engine
 include vendor/demented/config/themes_common.mk
 
@@ -123,14 +123,18 @@ include vendor/demented/config/cmsdk_common.mk
 
 # Required DEMENTED packages
 PRODUCT_PACKAGES += \
+    CMAudioService \
     Development \
     BluetoothExt \
-    Profiles
+    Profiles \
+    ThemeManagerService \
+    WeatherManagerService
 
 # Optional DEMENTED packages
 PRODUCT_PACKAGES += \
     libemoji \
-    Terminal
+    Terminal \
+    LiveWallpapersPicker
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -150,7 +154,9 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider \
     DataUsageProvider \
-    WallpaperPicker
+    WallpaperPicker \
+    SoundRecorder \
+    Screencast
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -171,8 +177,29 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace \
-    pigz
+    pigz \
+    7z \
+    lib7z \
+    bash \
+    bzip2 \
+    curl \
+    powertop \
+    unrar \
+    unzip \
+    vim \
+    wget \
+    zip
 
+# Custom off-mode charger
+ifneq ($(WITH_CM_CHARGER),false)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    cm_charger_res_images \
+    font_log.png \
+    libhealthd.cm
+endif
+
+# ExFAT support
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
 TARGET_USES_EXFAT := true
