@@ -1,3 +1,7 @@
+###########################
+# OmniROM common sepolicy
+#
+
 type userinit_exec, exec_type, file_type;
 type userinit_data_exec, file_type;
 

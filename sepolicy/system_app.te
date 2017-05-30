@@ -1,8 +1,13 @@
-# For the updaters
-allow system_app recovery_cache_file:dir create_dir_perms;
-allow system_app recovery_cache_file:file create_file_perms;
-allow system_app media_rw_data_file:dir create_dir_perms;
-allow system_app media_rw_data_file:file create_file_perms;
+###########################
+# OmniROM common sepolicy
+#
 
-# Boot animation
-allow system_app ctl_bootanim_prop:property_service set;
+allow system_app sysfs_lowmemorykiller:file rw_file_perms;
+allow system_app sysfs_devices_system_cpu:file rw_file_perms;
+allow system_app sysfs_ioscheduler:file rw_file_perms;
+allow system_app sysfs_zram:file rw_file_perms;
+allow system_app sysfs_ksm:file rw_file_perms;
+
+# Read /sys/kernel/debug/wakeup_sources.
+allow system_app debugfs:file r_file_perms;
+
