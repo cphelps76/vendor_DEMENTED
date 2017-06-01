@@ -6,8 +6,8 @@ PRODUCT_PACKAGES += \
 
 # Apps for car integration
 PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/apps/PowerEventMgr.apk:system/app/PowerEventMgr.apk \
-    vendor/demented/prebuilt/apps/VCam2.apk:system/app/VCam2.apk
+    vendor/demented/prebuilt/app/PowerEventMgr.apk:system/app/PowerEventMgr/PowerEventMgr.apk \
+    vendor/demented/prebuilt/app/VCam2.apk:system/app/VCam2/VCam2.apk
 
 # Misc for hostmode
 PRODUCT_COPY_FILES += \
