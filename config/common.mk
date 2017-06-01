@@ -1,33 +1,12 @@
-PRODUCT_BRAND ?= demented
-
-# use specific resolution for bootanimation
-ifneq ($(TARGET_BOOTANIMATION_SIZE),)
-PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/bootanimation/res/$(TARGET_BOOTANIMATION_SIZE).zip:system/media/bootanimation.zip
-else
-PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
-endif
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+# Sounds
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
+    ro.config.ringtone=Playa.ogg \
+    ro.config.notification_sound=regulus.ogg \
+    ro.config.alarm_alert=Alarm_Beep_03.ogg
 
-# general properties
+# Selinux
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.setupwizard.enterprise_mode=1 \
-    persist.sys.root_access=1
-
-# enable ADB authentication if not on eng build
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
+    ro.build.selinux=1
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -36,50 +15,18 @@ PRODUCT_COPY_FILES += \
     vendor/demented/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/demented/prebuilt/bin/blacklist:system/addon.d/blacklist
 
-# Backup Services whitelist
-PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/etc/sysconfig/backup.xml:system/etc/sysconfig/backup.xml
-
 # init.d support
-PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/demented/prebuilt/bin/sysinit:system/bin/sysinit
-
-# userinit support
-PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
-
-# Init script file with demented extras
-PRODUCT_COPY_FILES += \
-    vendor/demented/prebuilt/etc/init.local.rc:root/init.demented.rc
-
-# Enable SIP and VoIP on all targets
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# Dashclock
 #PRODUCT_COPY_FILES += \
-#    vendor/demented/prebuilt/app/DashClock.apk:system/app/DashClock.apk
+#    vendor/demented/prebuilt/bin/sysinit:system/bin/sysinit
+
+# Init script file with Demented extras
+#PRODUCT_COPY_FILES += \
+#    vendor/demented/prebuilt/etc/init.local.rc:root/init.dk.rc
 
 # Additional packages
 -include vendor/demented/config/packages.mk
 
-# Versioning
+PRODUCT_PACKAGE_OVERLAYS += vendor/demented/overlay
+
+# Versionning
 -include vendor/demented/config/version.mk
-
-# Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/demented/overlay/common
-
-# Enable dexpreopt for all nightlies
-ifeq ($(ROM_BUILDTYPE),NIGHTLY)
-    WITH_DEXPREOPT := true
-endif
-# and weeklies
-ifeq ($(ROM_BUILDTYPE),WEEKLY)
-    WITH_DEXPREOPT := true
-endif
-# and security releases
-ifeq ($(ROM_BUILDTYPE),SECURITY_RELEASE)
-    WITH_DEXPREOPT := true
-endif
-

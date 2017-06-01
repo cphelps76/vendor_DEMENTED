@@ -1,41 +1,19 @@
 # Additional packages
-ifneq ($(TARGET_LOW_RAM_DEVICE), true)
 PRODUCT_PACKAGES += \
-    Basic \
-    Development
-endif
+    AudioFX \
+    Launcher3 \
+    Apollo
 
-# Additional apps
-PRODUCT_PACKAGES += \
-    MonthCalendarWidget \
-    OpenDelta \
-    Chromium
+# Apps for car integration
+PRODUCT_COPY_FILES += \
+    vendor/demented/prebuilt/apps/PowerEventMgr.apk:system/app/PowerEventMgr.apk \
+    vendor/demented/prebuilt/apps/VCam2.apk:system/app/VCam2.apk
 
-ifneq ($(TARGET_NO_DSPMANAGER), true)
-PRODUCT_PACKAGES += \
-    audio_effects.conf \
-    DSPManager \
-    libcyanogen-dsp
-endif
-
-PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
-
-# Additional tools
-PRODUCT_PACKAGES += \
-    bash \
-    e2fsck \
-    fsck.exfat \
-    htop \
-    lsof \
-    mke2fs \
-    mount.exfat \
-    nano \
-    openvpn \
-    powertop \
-    tune2fs \
-    vim \
-    mkfs.ntfs \
-    mount.ntfs \
-    fsck.ntfs
-
+# Misc for hostmode
+PRODUCT_COPY_FILES += \
+    vendor/demented/prebuilt/framework/services.jar:system/framework/services.jar \
+    vendor/demented/prebuilt/system/powerdown.jpg:system/powerdown.jpg \
+    vendor/demented/prebuilt/system/powerup.jpg:system/powerup.jpg \
+    vendor/demented/prebuilt/vendor/saa7115.ko:system/vendor/saa7115.ko \
+    vendor/demented/prebuilt/vendor/stk1160.ko:system/vendor/stk1160.ko \
+    vendor/demented/prebuilt/vendor/usbtv.ko:system/vendor/usbtv.ko

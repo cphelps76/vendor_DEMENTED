@@ -1,20 +1,7 @@
 # Versioning of the ROM
+ ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +"%m-%d-%y")-$(DEMENTED_RELEASE_TYPE)-$(subst demented_,,$(TARGET_PRODUCT))
+ DEMENTED_VERSION := $(PLATFORM_VERSION)-$(DEMENTED_RELEASE_TYPE)
 
-ifndef ROM_BUILDTYPE
-    ROM_BUILDTYPE := HOMEMADE
-endif
-
-TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
-TARGET_PRODUCT_SHORT := $(subst demented_,,$(TARGET_PRODUCT_SHORT))
-
-# Build the final version string
-ifdef BUILDTYPE_RELEASE
-    ROM_VERSION := $(PLATFORM_VERSION)-$(TARGET_PRODUCT_SHORT)
-else
-    ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)
-endif
-
-# Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=Demented-$(ROM_VERSION) \
     ro.demented.version=$(ROM_VERSION)
+
