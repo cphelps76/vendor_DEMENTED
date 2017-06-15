@@ -133,8 +133,7 @@ PRODUCT_PACKAGES += \
 # Optional DEMENTED packages
 PRODUCT_PACKAGES += \
     libemoji \
-    Terminal \
-    LiveWallpapersPicker
+    Terminal
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -142,17 +141,11 @@ PRODUCT_PACKAGES += \
 
 # Custom DEMENTED packages
 PRODUCT_PACKAGES += \
-    DEMENTEDHome \
     AudioFX \
-    CMWallpapers \
-    CMFileManager \
-    Eleven \
-    LockClock \
     DementedSetupWizard \
     CMSettingsProvider \
     ExactCalculator \
     LiveLockScreenService \
-    WeatherProvider \
     DataUsageProvider \
     WallpaperPicker \
     SoundRecorder \
